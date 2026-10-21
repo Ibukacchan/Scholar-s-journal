@@ -25,3 +25,7 @@ A mobile-friendly, dark-academia Progressive Web App combining the Field Study I
 - The mock board calendar is provisional and does not claim to represent official coverage or weighting. Unscheduled courses appear in the Coverage Gaps view.
 - Courses are not marked mastered automatically. Update course status yourself.
 - Use HTTPS (GitHub Pages provides it) for PWA installation and service worker support.
+
+
+## RPG profile update
+The dashboard now uses the Ibukacchan RPG profile image and character progression: XP, levels/ranks, a study-day streak, accomplishments, and a unified quest board showing Field Study checklist items, dated Field Study tasks, and scheduled Mock Board Prep sessions. XP is calculated from the current completed work, so completing a task/session adds XP and unchecking or reopening it removes that XP. Progress is saved locally in the browser on this device. Keep `ibukacchan-profile.jpg` in the repository root with the other app files.
