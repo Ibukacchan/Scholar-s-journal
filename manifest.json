@@ -1,22 +1,14 @@
 {
-  "name": "The Scholar's Journal \u2014 Study Command Center",
-  "short_name": "Scholar Journal",
-  "description": "Dark academia study planner for Field Study and Mock Board Preparation.",
-  "start_url": "./",
+  "name": "The Scholar's Ledger — Field Study & Mock Board Prep",
+  "short_name": "Scholar's Ledger",
+  "description": "A dark academia academic planner for Field Study I and BSEd English mock board preparation.",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#171713",
-  "theme_color": "#29251f",
+  "theme_color": "#24221b",
   "icons": [
-    {
-      "src": "icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+    {"src":"icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
   ]
 }

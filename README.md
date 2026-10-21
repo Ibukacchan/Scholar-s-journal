@@ -1,30 +1,27 @@
-# The Scholar's Journal — Study Command Center
+# The Scholar's Ledger
 
-A GitHub Pages-ready Progressive Web App with a dark academia look.
+A mobile-friendly, dark-academia Progressive Web App combining the Field Study I checklist and a BSEd English Mock Board Preparation workspace.
 
-## Menu
-- **Dashboard**: Field Study checklist progress, today's open tasks, weekly open tasks, mock-board review log count, and the personal motto.
-- **Field Study**: Existing episode checklist and deadlines, daily task entry, personal tasks, and a Monday–Sunday weekly view.
-- **Mock Board Preparation**: Log review topics, review type, date, study minutes, score percentage, and notes. The app calculates an average for recorded scores.
+## Included
+- Dashboard, Field Study, and Mock Board Prep menu
+- Original Field Study I episode/task data in `data.json`
+- Dated field-study and personal tasks with Today, Weekly, and All views
+- Mock board course coverage for all 47 supplied courses, with editable status, confidence, priority, notes, and review dates
+- Provisional 30-day study calendar (October 21–November 19, 2026), with 30-minute sessions and editable status
+- Daily 30-minute routine, weekly reflection pages, active-recall/error log, and spaced-review dates
+- PWA manifest, icons, and service worker for offline caching
+- Local data stored in this browser using `localStorage`
 
-## Motto
-> YOU DO IT RIGHT. AND, YOU DO IT EVERYDAY.
->
-> ONE TAKE. NO RETAKE.
+## Publish on GitHub Pages
+1. Extract this ZIP.
+2. Upload every file inside this folder into the **root** of your GitHub Pages repository (not the ZIP itself).
+3. Commit the changes. In repository Settings → Pages, ensure the publishing source points to the branch and `/(root)` if using branch publishing, or keep your existing Actions setup if already configured.
+4. Wait for deployment, then open your GitHub Pages URL in Chrome on Android.
+5. In Chrome's menu, choose **Install app** or **Add to Home screen**.
 
-## Deploy to GitHub Pages
-1. Extract the ZIP.
-2. Upload **all files inside this folder** to the root of your GitHub repository (not the ZIP itself).
-3. Commit the changes.
-4. In repository Settings → Pages, use GitHub Actions or Deploy from branch with `main` and `/(root)`, matching your current setup.
-5. Open your GitHub Pages URL in Chrome on Android and choose **Install app** or **Add to Home screen**.
-
-## Files
-- `index.html`: the app interface and client-side functionality
-- `data.json`: the original Field Study episode checklist
-- `manifest.json`: PWA install metadata
-- `sw.js`: offline caching
-- `icon.svg`, `icon-192.png`, `icon-512.png`: app icons
-
-## Data and privacy
-Checklist checks, daily tasks, and mock-board review logs are stored in the browser's local storage on the device. They are not automatically synced to GitHub or between devices. Clearing browser/site data may erase this locally stored information. Offline access works after the app has been loaded and cached at least once while online.
+## Important
+- Keep `index.html`, `data.json`, `manifest.json`, `sw.js`, and the icons together in the published root.
+- Progress is saved locally in the browser on the current device; it does not automatically sync across devices or browsers.
+- The mock board calendar is provisional and does not claim to represent official coverage or weighting. Unscheduled courses appear in the Coverage Gaps view.
+- Courses are not marked mastered automatically. Update course status yourself.
+- Use HTTPS (GitHub Pages provides it) for PWA installation and service worker support.
