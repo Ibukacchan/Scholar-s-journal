@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#29251f"><meta name="description" content="The Scholar’s Journal: dark academia dashboard, field study planner, and mock board preparation.">
+<link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>The Scholar’s Journal • Study Command Center</title>
+<style>
+:root{color-scheme:dark;--bg:#171713;--card:#22221c;--ink:#e9dfc9;--muted:#aaa18e;--line:#464133;--accent:#a98b58;--accent2:#393324;--green:#a5a878;--orange:#c18c58}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#28261e 0%,var(--bg) 58%);color:var(--ink);font:16px/1.5 Georgia,'Times New Roman',serif}header{background:linear-gradient(135deg,#25251d,#403727);color:#f1e5c9;padding:28px 18px 25px;border-bottom:1px solid #756344;box-shadow:0 8px 30px #0005}.wrap{max-width:900px;margin:auto;padding:0 15px}header .wrap{padding:0 2px}.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;color:#c5ad7b;font-weight:bold}h1{font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.1;margin:9px 0;letter-spacing:.04em}header p{margin:8px 0 0;color:#d6c8a9}.motto{margin-top:19px;padding:14px 16px;border-left:3px solid #b49a68;background:#17171366;font-style:italic;letter-spacing:.05em}.motto strong{display:block;font-size:1.03rem;letter-spacing:.12em}.motto span{display:block;color:#c7b38a;font-size:.82rem;margin-top:5px;letter-spacing:.16em}.deadline{display:inline-block;margin-top:13px;margin-right:5px;padding:7px 10px;border:1px solid #796746;border-radius:2px;font-size:.84rem;color:#e6d8b7}main{padding:20px 0 42px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}.stat,.panel,.episode{background:var(--card);border:1px solid var(--line);border-radius:3px;box-shadow:0 4px 18px #0002}.stat{padding:13px}.stat strong{font-size:1.4rem;display:block;color:#d0b47a}.stat span{font-size:.78rem;color:var(--muted)}.progress{height:5px;background:#39372d;overflow:hidden;margin-top:9px}.progress div{height:100%;background:var(--accent);width:0;transition:width .2s}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.search,.field{flex:1;min-width:150px;padding:11px 12px;border:1px solid var(--line);border-radius:2px;font:inherit;background:#1c1c17;color:var(--ink)}.btn{border:1px solid #61563f;background:#29271f;color:var(--ink);padding:10px 12px;border-radius:2px;font:inherit;font-weight:bold;cursor:pointer}.btn.primary{background:#8d744a;color:#171713;border-color:#8d744a}.btn:active{transform:translateY(1px)}.tabs{display:flex;gap:7px;overflow:auto;padding:2px 0 12px}.tab{white-space:nowrap;border:1px solid var(--line);background:#22221c;padding:8px 12px;border-radius:2px;cursor:pointer;font-weight:bold;color:#c4b89f;font-family:inherit}.tab.active{background:#4a402c;border-color:#a98b58;color:#f3e6c7}.notice{padding:13px 14px;background:#302b20;border:1px solid #5e5036;margin:10px 0 16px;font-size:.9rem;color:#d9c9a7}.section-label{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:#c1a875;font-weight:bold;margin:19px 2px 9px}.panel{padding:16px;margin:15px 0}.panel h2{font-size:1.2rem;margin:0 0 4px;letter-spacing:.04em}.subtle{color:var(--muted);font-size:.87rem;margin:0 0 13px}.task-form{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.task-form .field{min-width:130px}.planner-switch{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.planner-list{margin-top:12px}.planner-item{display:flex;gap:10px;align-items:flex-start;padding:11px 2px;border-bottom:1px solid var(--line)}.planner-item:last-child{border-bottom:0}.planner-item input[type=checkbox]{width:18px;height:18px;accent-color:var(--accent);margin:3px 0 0}.planner-copy{flex:1;min-width:0}.planner-copy.done{text-decoration:line-through;color:#8b887b}.planner-date{font-size:.76rem;color:var(--muted);display:block;margin-top:2px}.delete{border:0;background:transparent;color:#c18c58;font-size:1.1rem;cursor:pointer}.week-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}.episode{margin-bottom:11px;overflow:hidden}.ep-head{padding:15px;display:flex;gap:12px;align-items:flex-start;cursor:pointer}.ep-number{width:42px;height:42px;flex:0 0 42px;border:1px solid #665638;background:#393324;color:#d4bb86;display:grid;place-items:center;font-weight:bold}.ep-main{min-width:0;flex:1}.ep-title{font-weight:bold;line-height:1.28}.ep-date{font-size:.8rem;color:var(--muted);margin-top:4px}.ep-meta{display:flex;align-items:center;gap:8px;margin-top:7px;font-size:.78rem;color:var(--muted)}.mini-progress{height:4px;background:#39372d;overflow:hidden;flex:1;max-width:100px}.mini-progress div{height:100%;background:var(--green)}.chevron{color:var(--muted);padding:5px}.tasks{padding:0 14px 13px;border-top:1px solid var(--line)}.task{display:flex;align-items:flex-start;gap:10px;padding:10px 2px;border-bottom:1px solid #343229}.task:last-child{border-bottom:0}.task input{width:19px;height:19px;accent-color:var(--accent);margin:2px 0 0;flex:0 0 auto}.task label{flex:1;cursor:pointer;font-size:.94rem}.task.done label{text-decoration:line-through;color:#8b887b}.tag{font-size:.7rem;color:var(--muted);white-space:nowrap}.empty{text-align:center;padding:25px 15px;color:var(--muted);font-style:italic}footer{font-size:.78rem;color:var(--muted);text-align:center;padding:10px 0 30px;border-top:1px solid var(--line);margin-top:20px}.ornament{text-align:center;color:#8d774f;letter-spacing:.4em;margin:18px 0}
+@media(min-width:640px){.ep-head{padding:17px}.tasks{padding:0 20px 15px}.task{padding:11px 3px}}
+
+.page{display:none}.page.active{display:block}.main-nav{display:flex;gap:8px;overflow-x:auto;padding:14px 0 4px;margin-bottom:10px}.nav-btn{flex:1;min-width:max-content;border:1px solid var(--line);background:#22221c;color:#c4b89f;padding:12px 15px;font:inherit;font-weight:bold;cursor:pointer;text-align:left}.nav-btn.active{background:#4a402c;border-color:#a98b58;color:#f3e6c7}.nav-btn span{display:block;font-size:.7rem;letter-spacing:.1em;color:#b5a47f;font-weight:normal;margin-top:3px}.dash-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0}.dash-card{background:var(--card);border:1px solid var(--line);padding:15px;min-width:0}.dash-card h3{margin:0 0 7px;color:#d0b47a;font-size:1rem}.dash-card p{margin:0;color:var(--muted);font-size:.88rem}.dash-card .big{font-size:1.65rem;color:var(--ink);display:block;margin:4px 0}.mock-form{display:grid;grid-template-columns:1fr 1fr;gap:8px}.mock-form .field{width:100%;min-width:0}.mock-form .wide{grid-column:1/-1}.mock-item{border-bottom:1px solid var(--line);padding:12px 2px;display:flex;gap:10px;align-items:flex-start}.mock-item:last-child{border-bottom:0}.mock-item-main{flex:1;min-width:0}.mock-item strong{display:block}.mock-item small{display:block;color:var(--muted);margin-top:3px}.score-pill{display:inline-block;border:1px solid #756344;color:#d8c28f;padding:2px 7px;margin-top:5px;font-size:.78rem}.small-label{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#bca574;margin:10px 0 5px}@media(max-width:480px){.dash-grid{grid-template-columns:1fr}.mock-form{grid-template-columns:1fr}.mock-form .wide{grid-column:auto}.nav-btn{padding:10px}}
+</style></head>
+<body>
+<header><div class="wrap"><div class="eyebrow">The Scholar’s Journal · Study Command Center</div><h1>THE SCHOLAR’S JOURNAL</h1><p>A quiet place for disciplined study, fieldwork, and board-exam mastery.</p><div class="motto"><strong>YOU DO IT RIGHT.</strong><strong>AND, YOU DO IT EVERYDAY.</strong><span>ONE TAKE. NO RETAKE.</span></div><div class="deadline">EP 1–12 · Due November 12, 2026</div><div class="deadline">EP 13–16 · November 21–30</div></div></header>
+<main class="wrap">
+<nav class="main-nav" aria-label="Main menu">
+<button class="nav-btn active" data-page="dashboardPage">⌂ Dashboard<span>OVERVIEW</span></button>
+<button class="nav-btn" data-page="fieldStudyPage">▤ Field Study<span>EPISODES & TASKS</span></button>
+<button class="nav-btn" data-page="mockBoardPage">✦ Mock Board Prep<span>REVIEW & SCORES</span></button>
+</nav>
+<section id="dashboardPage" class="page active">
+<div class="stats">
+ <div class="stat"><strong id="doneCount">0</strong><span>Field-study tasks completed</span></div>
+ <div class="stat"><strong id="totalCount">0</strong><span>Total checklist tasks</span></div>
+ <div class="stat"><strong id="percent">0%</strong><span>Field-study progress</span><div class="progress"><div id="overallBar"></div></div></div>
+</div>
+<div class="panel"><div class="eyebrow">Your daily intention</div><h2>Make today count.</h2><p class="subtle">A clear mind, a steady hand, one task completed at a time.</p><div class="motto"><strong>YOU DO IT RIGHT.</strong><strong>AND, YOU DO IT EVERYDAY.</strong><span>ONE TAKE. NO RETAKE.</span></div></div>
+<div class="dash-grid">
+<div class="dash-card"><h3>✦ Today’s field notes</h3><span class="big" id="dashTodayCount">0</span><p>Tasks planned for today</p><button class="btn" data-goto="fieldStudyPage" style="margin-top:12px">Open Field Study →</button></div>
+<div class="dash-card"><h3>✦ Weekly discipline</h3><span class="big" id="dashWeekCount">0</span><p>Tasks planned this week</p><button class="btn" data-goto="fieldStudyPage" style="margin-top:12px">View weekly plan →</button></div>
+<div class="dash-card"><h3>✦ Mock board preparation</h3><span class="big" id="dashMockCount">0</span><p>Review items logged</p><button class="btn" data-goto="mockBoardPage" style="margin-top:12px">Enter review room →</button></div>
+<div class="dash-card"><h3>✦ Your principle</h3><p>Consistency over intensity. Do the work properly, then return tomorrow and do it again.</p></div>
+</div>
+<div class="ornament">✦ · ✦ · ✦</div>
+</section>
+<section id="fieldStudyPage" class="page">
+
+<section class="panel" aria-labelledby="dailyTitle"><h2 id="dailyTitle">✦ Today’s Field Notes</h2><p class="subtle">Assigned field-study work and the extra things you need to get done.</p><div class="task-form"><input class="field" id="newTask" placeholder="Write a task…" aria-label="Task description"><input class="field" id="taskDate" type="date" aria-label="Task date"><select class="field" id="taskType" aria-label="Task category"><option value="Field Study">Field Study</option><option value="Personal">Other task</option></select><button class="btn primary" id="addTask">Add task</button></div><div class="planner-switch"><button class="btn primary" id="todayView">Today</button><button class="btn" id="weekView">Weekly view</button></div><div id="plannerHeading" class="section-label">Today’s tasks</div><div id="plannerList" class="planner-list"></div><div class="ornament">✦ · ✦ · ✦</div></section>
+<div class="notice"><strong>Plan:</strong> EP 1–12 are spread from Oct 21 to Nov 11, with Nov 12 for final checking and Nov 13 as a buffer. EP 3 is marked complete based on your checklist. EP 13–16 are scheduled Nov 21–30.</div>
+<div class="toolbar"><input class="search" id="search" placeholder="Search episodes or tasks…" aria-label="Search episodes or tasks"><button class="btn" id="expandBtn">Expand all</button><button class="btn" id="resetBtn">Reset checks</button></div>
+<div class="tabs"><button class="tab active" data-filter="all">All episodes</button><button class="tab" data-filter="first">EP 1–12</button><button class="tab" data-filter="later">EP 13–16</button><button class="tab" data-filter="remaining">Remaining tasks</button><button class="tab" data-filter="done">Completed episodes/tasks</button></div>
+<div id="list"></div>
+
+</section>
+<section id="mockBoardPage" class="page">
+<div class="panel"><div class="eyebrow">The review room</div><h2>Mock Board Preparation</h2><p class="subtle">Build a steady review habit. Record subjects, study sessions, practice sets, and mock exam scores.</p>
+<div class="section-label">Add a review item</div>
+<div class="mock-form">
+<input class="field" id="mockSubject" placeholder="Subject / topic (e.g. Assessment of Learning)">
+<select class="field" id="mockKind"><option value="Review session">Review session</option><option value="Practice questions">Practice questions</option><option value="Mock exam">Mock exam</option><option value="Flashcards">Flashcards</option><option value="Weak topic">Weak topic to revisit</option></select>
+<input class="field" id="mockDate" type="date" aria-label="Review date">
+<input class="field" id="mockDuration" type="number" min="0" placeholder="Minutes studied (optional)">
+<input class="field" id="mockScore" type="number" min="0" max="100" placeholder="Score % (optional)">
+<input class="field" id="mockNotes" placeholder="Notes / what to improve (optional)">
+<button class="btn primary wide" id="addMock">Add to review log</button>
+</div>
+<div class="section-label">Your review log</div><div id="mockSummary" class="notice">Your review history will appear here.</div><div id="mockList"></div>
+</div>
+<div class="panel"><h2>✦ Board preparation ritual</h2><p class="subtle">Use this as a repeatable study loop. Check off each step as you complete it.</p><div id="ritualList"></div></div>
+</section>
+<footer>Progress is saved on this device. For installation/offline use, host this folder on HTTPS (or localhost), then choose “Install app” / “Add to Home screen” in your browser.</footer>
+</main>
+<script>
+const STORAGE='field-study-1-checks-v1';
+const PLANNER_STORAGE='field-study-planner-tasks-v1';
+let plannerTasks=[], plannerMode='today', weekOffset=0;
+let data, checks={}, filter='all', expanded=new Set([1,2,3]), expandAll=false;
+const $=s=>document.querySelector(s);
+const fmt=d=>new Date(d+'T12:00:00').toLocaleDateString('en-PH',{month:'short',day:'numeric'});
+function loadChecks(){try{checks=JSON.parse(localStorage.getItem(STORAGE)||'{}')}catch{checks={}}}
+function save(){localStorage.setItem(STORAGE,JSON.stringify(checks));render()}
+function key(e,i){return `ep${e}-task${i}`}
+function allTasks(){return data.episodes.flatMap(e=>e.tasks.map((t,i)=>({e,i,done:checks[key(e.n,i)]??t[1]})))}
+function isDone(e,i){return checks[key(e.n,i)]??e.tasks[i][1]}
+function render(){
+ const tasks=allTasks(), done=tasks.filter(t=>t.done).length, pct=tasks.length?Math.round(done/tasks.length*100):0;
+ $('#doneCount').textContent=done;$('#totalCount').textContent=tasks.length;$('#percent').textContent=pct+'%';$('#overallBar').style.width=pct+'%';
+ const q=$('#search').value.trim().toLowerCase();let html='',shown=0;
+ const eps=data.episodes.filter(e=>{
+  if(filter==='first'&&e.n>12)return false;if(filter==='later'&&e.n<13)return false;
+  const count=e.tasks.filter((t,i)=>isDone(e,i)).length;
+  if(filter==='remaining'&&count===e.tasks.length)return false;
+  if(filter==='done'&&count===0)return false;
+  if(q&&!(`${e.n} ${e.title} ${e.tasks.map(t=>t[0]).join(' ')}`).toLowerCase().includes(q))return false;
+  return true;
+ });
+ for(const e of eps){const finished=e.tasks.filter((t,i)=>isDone(e,i)).length, open=expanded.has(e.n)||expandAll;
+  const date=e.n<=12?`${fmt(e.start)}${e.start===e.end?'':' – '+fmt(e.end)}`:`${fmt(e.start)} – ${fmt(e.end)}`;
+  html+=`<article class="episode"><div class="ep-head" data-toggle="${e.n}" role="button" tabindex="0" aria-expanded="${open}"><div class="ep-number">${e.n}</div><div class="ep-main"><div class="ep-title">EP ${e.n} · ${esc(e.title)}</div><div class="ep-date">📅 ${date}${e.n<=12?' · Deadline Nov 12':' · Scheduled Nov 21–30'}</div><div class="ep-meta"><span>${finished}/${e.tasks.length} tasks</span><div class="mini-progress"><div style="width:${Math.round(finished/e.tasks.length*100)}%"></div></div><span>${Math.round(finished/e.tasks.length*100)}%</span></div></div><div class="chevron">${open?'⌃':'⌄'}</div></div>`;
+  if(open){html+='<div class="tasks">';e.tasks.forEach((t,i)=>{const d=isDone(e,i);if(filter==='remaining'&&d)return;if(filter==='done'&&!d)return;
+    html+=`<div class="task ${d?'done':''}"><input type="checkbox" id="${key(e,i)}" data-ep="${e.n}" data-i="${i}" ${d?'checked':''}><label for="${key(e,i)}">${esc(t[0])}</label></div>`;
+  });html+='</div>'}html+='</article>';shown++;
+ }
+ $('#list').innerHTML=html||'<div class="empty">No matching tasks. Try another search or filter.</div>';
+ $('#list').querySelectorAll('input[type=checkbox]').forEach(el=>el.addEventListener('change',()=>{checks[key(Number(el.dataset.ep),Number(el.dataset.i))]=el.checked;localStorage.setItem(STORAGE,JSON.stringify(checks));render()}));
+ $('#list').querySelectorAll('[data-toggle]').forEach(el=>{const toggle=()=>{const n=Number(el.dataset.toggle);if(expanded.has(n))expanded.delete(n);else expanded.add(n);expandAll=false;render()};el.addEventListener('click',toggle);el.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();toggle()}})});
+}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function localDate(d=new Date()){const x=new Date(d.getTime()-d.getTimezoneOffset()*60000);return x.toISOString().slice(0,10)}
+function loadPlanner(){try{plannerTasks=JSON.parse(localStorage.getItem(PLANNER_STORAGE)||'[]')}catch{plannerTasks=[]}}
+function savePlanner(){localStorage.setItem(PLANNER_STORAGE,JSON.stringify(plannerTasks));renderPlanner();renderDashboard()}
+function weekStart(date){const d=new Date(date+'T12:00:00');const day=(d.getDay()+6)%7;d.setDate(d.getDate()-day+weekOffset*7);return localDate(d)}
+function renderPlanner(){const today=localDate();const dateInput=$('#taskDate');if(!dateInput.value)dateInput.value=today;let start=weekStart(today),endDate=new Date(start+'T12:00:00');endDate.setDate(endDate.getDate()+6);const end=localDate(endDate);let shown=plannerTasks.filter(t=>plannerMode==='today'?t.date===today:t.date>=start&&t.date<=end).sort((a,b)=>a.date.localeCompare(b.date));$('#plannerHeading').textContent=plannerMode==='today'?`Today · ${fmt(today)}`:`Week · ${fmt(start)} – ${fmt(end)}`;$('#todayView').classList.toggle('primary',plannerMode==='today');$('#weekView').classList.toggle('primary',plannerMode==='week');let html='';if(plannerMode==='week'){html+=`<div class="week-heading"><button class="btn" id="prevWeek">← Previous</button><span class="subtle">${weekOffset===0?'Current week':weekOffset>0?'Future week':'Past week'}</span><button class="btn" id="nextWeek">Next →</button></div>`}if(!shown.length)html+='<div class="empty">No tasks here yet. Add one above, and keep your promises to yourself.</div>';for(const t of shown){html+=`<div class="planner-item"><input type="checkbox" data-planner-check="${t.id}" ${t.done?'checked':''} aria-label="Mark task complete"><div class="planner-copy ${t.done?'done':''}">${esc(t.text)}<span class="planner-date">${plannerMode==='week'?fmt(t.date)+' · ':''}${esc(t.type)}</span></div><button class="delete" data-planner-delete="${t.id}" aria-label="Delete task">×</button></div>`}$('#plannerList').innerHTML=html;$('#plannerList').querySelectorAll('[data-planner-check]').forEach(el=>el.addEventListener('change',()=>{const t=plannerTasks.find(x=>x.id===el.dataset.plannerCheck);if(t)t.done=el.checked;savePlanner()}));$('#plannerList').querySelectorAll('[data-planner-delete]').forEach(el=>el.addEventListener('click',()=>{plannerTasks=plannerTasks.filter(x=>x.id!==el.dataset.plannerDelete);savePlanner()}));const prev=$('#prevWeek'),next=$('#nextWeek');if(prev)prev.addEventListener('click',()=>{weekOffset--;renderPlanner()});if(next)next.addEventListener('click',()=>{weekOffset++;renderPlanner()})}
+$('#taskDate').value=localDate();$('#addTask').addEventListener('click',()=>{const text=$('#newTask').value.trim(),date=$('#taskDate').value||localDate();if(!text){$('#newTask').focus();return}plannerTasks.push({id:String(Date.now())+'-'+Math.random().toString(36).slice(2,7),text,date,type:$('#taskType').value,done:false});$('#newTask').value='';savePlanner()});$('#newTask').addEventListener('keydown',e=>{if(e.key==='Enter')$('#addTask').click()});$('#todayView').addEventListener('click',()=>{plannerMode='today';renderPlanner()});$('#weekView').addEventListener('click',()=>{plannerMode='week';weekOffset=0;renderPlanner()});loadPlanner();renderPlanner();
+fetch('data.json').then(r=>r.json()).then(d=>{data=d;loadChecks();render();renderDashboard()}).catch(()=>{$('#list').innerHTML='<div class="empty">Could not load the checklist. Please reopen the app while connected once.</div>'});
+$('#search').addEventListener('input',render);
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));render()}));
+$('#expandBtn').addEventListener('click',()=>{expandAll=!expandAll;expanded=expandAll?new Set(data.episodes.map(e=>e.n)):new Set();$('#expandBtn').textContent=expandAll?'Collapse all':'Expand all';render()});
+$('#resetBtn').addEventListener('click',()=>{if(confirm('Reset every saved checkbox to the original checklist status? This cannot be undone.')){checks={};localStorage.removeItem(STORAGE);render()}});
+
+const MOCK_STORAGE='scholars-journal-mock-board-v1';
+let mockItems=[];
+const todayISO=()=>localDate();
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.page===id));if(id==='dashboardPage')renderDashboard();if(id==='mockBoardPage')renderMock();window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('.nav-btn').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+document.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.goto)));
+function loadMock(){try{mockItems=JSON.parse(localStorage.getItem(MOCK_STORAGE)||'[]')}catch{mockItems=[]}}
+function saveMock(){localStorage.setItem(MOCK_STORAGE,JSON.stringify(mockItems));renderMock();renderDashboard()}
+function renderDashboard(){const today=localDate();const start=weekStart(today);const endD=new Date(start+'T12:00:00');endD.setDate(endD.getDate()+6);const end=localDate(endD);const todayN=plannerTasks.filter(t=>t.date===today&&!t.done).length;const weekN=plannerTasks.filter(t=>t.date>=start&&t.date<=end&&!t.done).length;const dc=$('#dashTodayCount'),wc=$('#dashWeekCount'),mc=$('#dashMockCount');if(dc)dc.textContent=todayN;if(wc)wc.textContent=weekN;if(mc)mc.textContent=mockItems.length;}
+function renderMock(){const list=$('#mockList');if(!list)return;const total=mockItems.length, scores=mockItems.filter(x=>x.score!==''&&x.score!==null&&x.score!==undefined).map(x=>Number(x.score));const avg=scores.length?Math.round(scores.reduce((a,b)=>a+b,0)/scores.length):null;$('#mockSummary').innerHTML=`<strong>${total}</strong> review item${total===1?'':'s'} logged · <strong>${avg===null?'No scores yet':`Average score: ${avg}%`}</strong>`;if(!total){list.innerHTML='<div class="empty">No review items yet. Begin with one subject and one focused session.</div>'}else{list.innerHTML=mockItems.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(x=>`<div class="mock-item"><div class="mock-item-main"><strong>${esc(x.subject)}</strong><small>${fmt(x.date)} · ${esc(x.kind)}${x.duration?` · ${esc(x.duration)} min`:''}</small>${x.score!==''&&x.score!==null?`<span class="score-pill">Score ${esc(x.score)}%</span>`:''}${x.notes?`<small>${esc(x.notes)}</small>`:''}</div><button class="delete" data-mock-delete="${x.id}" aria-label="Delete review item">×</button></div>`).join('')};list.querySelectorAll('[data-mock-delete]').forEach(b=>b.addEventListener('click',()=>{mockItems=mockItems.filter(x=>x.id!==b.dataset.mockDelete);saveMock()}));const ritual=$('#ritualList');const steps=['Choose one specific topic before you begin.','Review actively: recall, explain, or write from memory.','Answer practice questions without looking at notes.','Record mistakes and revisit weak concepts.','Schedule the next review instead of relying on motivation.'];ritual.innerHTML=steps.map((s,i)=>`<div class="planner-item"><input type="checkbox" id="ritual${i}" aria-label="Complete ${esc(s)}"><label for="ritual${i}" class="planner-copy">${esc(s)}</label></div>`).join('');}
+$('#mockDate').value=localDate();$('#addMock').addEventListener('click',()=>{const subject=$('#mockSubject').value.trim();if(!subject){$('#mockSubject').focus();return}const score=$('#mockScore').value.trim();if(score!==''&&(Number(score)<0||Number(score)>100)){alert('Enter a score from 0 to 100.');return}mockItems.push({id:String(Date.now())+'-'+Math.random().toString(36).slice(2,7),subject,kind:$('#mockKind').value,date:$('#mockDate').value||localDate(),duration:$('#mockDuration').value.trim(),score,notes:$('#mockNotes').value.trim()});['mockSubject','mockDuration','mockScore','mockNotes'].forEach(id=>$('#'+id).value='');saveMock()});
+
+loadMock();renderDashboard();renderMock();
+if('serviceWorker'in navigator && location.protocol.startsWith('http'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+</script></body></html>
